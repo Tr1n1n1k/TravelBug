@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Travel Bug</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <ul class="nav justify-content-end nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Login</a>
+    </li>
+  </ul>
+
+  <!-- Jumbotron -->
+
+  <div class="jumbotron">
+    <h1 class="display-4">Travel Bug</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  </div>
+
+  <!-- 1st row: buttons and search bar -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- buttons -->
+        <button type="button" id="toronto" class="btn btn-primary">Toronto</button>
+        <button type="button" id="tokyo" class="btn btn-primary">Tokyo</button>
+        <button type="button" id="nyc" class="btn btn-primary">New York City</button>
+        <button type="button" id="london" class="btn btn-primary">London</button>
+        <button type="button" id="paris" class="btn btn-primary">Paris</button>
+      </div>
+      <div class="col">
+        <!-- search form -->
+        <form>
+          <div class="form-group">
+            <label for="search-input">Search for a City</label>
+            <input type="email" class="form-control" id="search-input" placeholder="ex. Seoul">
+          </div>
+          <button type="search" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+</body>
+
+</html>
