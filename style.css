@@ -1,0 +1,10 @@
+.jumbotron{
+  background: url("travel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 20%;
+  max-height: 50%;
+}
+
+.lead{
+  font-weight:500;
+}
