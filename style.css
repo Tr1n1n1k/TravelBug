@@ -3,11 +3,16 @@
   background-size: cover;
   min-height: 20%;
   max-height: 50%;
+  opacity: 0.8;
 }
 
 #blurb{
   background-color:rgba(245, 239, 227, 0.6);
   margin-top:0px;
+}
+
+body{
+  background-color:beige;
 }
 
 .lead{
