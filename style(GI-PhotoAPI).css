@@ -18,7 +18,7 @@
 
 body {
   font: 18px arial, sans-serif;
-  background: #eee;
+  background: beige;
   width: 100%;
   padding: 30px;
 }
@@ -31,12 +31,19 @@ body {
   padding: 10px;
 }
 
-form {
+/* form {
   width: 100%;
   margin: 20px;
   padding-left: 200px;
   padding-right: 200px;
-}
+  float:right;
+} */
+
+/* form{
+  float: right;
+  padding:25px;
+  margin-right: 15%;
+} */
 
 label {
   display: block;
@@ -62,4 +69,21 @@ input[type='submit'] {
   margin: 0 10px 10px 0;
   cursor: pointer;
   box-shadow: 2px 2px 3px #bbb;
+}
+
+.jumbotron{
+  background: url("travel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /* min-height: 20%;
+  max-height: 50%; */
+  opacity: 0.8;
+}
+
+#blurb{
+  background-color:rgba(245, 239, 227, 0.6);
+  margin-top:0px;
+}
+
+.lead{
+  font-weight:500;
 }
