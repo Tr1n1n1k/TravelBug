@@ -5,6 +5,11 @@
   max-height: 50%;
 }
 
+#blurb{
+  background-color:rgba(245, 239, 227, 0.6);
+  margin-top:0px;
+}
+
 .lead{
   font-weight:500;
 }
