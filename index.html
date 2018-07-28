@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Travel Bug</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <ul class="nav justify-content-end nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Login</a>
+    </li>
+  </ul>
+
+  <!-- Jumbotron -->
+
+  <div class="jumbotron">
+    <div id="blurb" class="container">
+      <h1 class="display-4">Travel Bug</h1>
+      <p class="lead">Whether you're planning for your next trip or just simply need some inspiration, let Travel Bug help you choose your
+        next destination!
+      </p>
+    </div>
+    <hr class="my-4">
+  </div>
+
+  <!-- 1st row: buttons and search bar -->
+  <p>Browse pictures, plan for the weather or see what others have to say about where you're headed!</p>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- buttons -->
+        <button type="button" id="toronto" class="btn btn-primary">Toronto</button>
+        <button type="button" id="tokyo" class="btn btn-primary">Tokyo</button>
+        <button type="button" id="nyc" class="btn btn-primary">New York City</button>
+        <button type="button" id="london" class="btn btn-primary">London</button>
+        <button type="button" id="paris" class="btn btn-primary">Paris</button>
+      </div>
+      <div class="col">
+        <!-- search form -->
+        <form>
+          <div class="form-group">
+            <label for="search-input">Search for a City</label>
+            <input type="email" class="form-control" id="search-input" placeholder="ex. Seoul">
+          </div>
+          <button type="search" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Pictures and Weather -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        Pictures
+      </div>
+      <div class="col">
+        Weather
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+
+
+</body>
+
+</html>
