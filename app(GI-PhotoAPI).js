@@ -27,14 +27,12 @@ $(function () {
     }
   }
 
-  //Add more buttons when search new animals pics
+  //Add more buttons when search new destination pics
   $('#addSearch').on('click', function () {
-    //eq(0) used to ensure it takes the value from the text input not submit button input.
-    var newSearch = $('input')
-      .eq(0)
-      .val();
+    var newSearch = $('#search-input').val().trim();
     //pushing it to seach array
     searchArray.push(newSearch);
+    newSearch = $('#search-input').val("");
     console.log('input');
     //want to popoulate button to buttosArea
     populateButtons(searchArray, 'searchButton', '#buttonsArea');

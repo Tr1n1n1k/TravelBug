@@ -30,6 +30,12 @@
   <link href="style(GI-PhotoAPI).css" rel="stylesheet">
   <link href="hover.css" rel="stylesheet">
 
+  <!-- FONTS -->
+
+  <link href="https://fonts.googleapis.com/css?family=Philosopher:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cardo:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
   <script src="app(GI-PhotoAPI).js " type="text/javascript "></script>
 
   <title>TRAVEL BUG</title>
@@ -57,7 +63,7 @@
     <hr class="my-4">
   </div>
 
-  <p>Explore some of the top travel destinations below. Plan for your trip by reading reviews by fellow travelers on top attractions,
+  <p id="explanation">Explore some of the top travel destinations below. Plan for your trip by reading reviews by fellow travelers on top attractions,
     places to stay and local cuisine. Browse through pictures of your destination for ideas and plan your outfits according
     to the weather.</p>
   <div class="container">
@@ -72,6 +78,7 @@
     <div class="row">
       <div class="col">
         <form id="search-form">
+          <p id="search">Your adventure awaits! Enter in a destination below.</p>
           <label for="search-input"></label>
           <input type="text" id="search-input">
           <br>
