@@ -10,7 +10,7 @@ h1{
 
 #instagram{
   font-family: 'Lora', serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .wrapper {
@@ -71,7 +71,7 @@ input[type='text'] {
 
 button,
 input[type='submit'] {
-  background: #659a98;
+  background: #35b6dd;
   color: #ffffff;
   border: 0;
   border-radius: 5px;
