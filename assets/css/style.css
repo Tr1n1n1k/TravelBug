@@ -1,20 +1,29 @@
-.jumbotron{
-  background: url("travel.jpg") no-repeat center center fixed;
+.jumbotron {
+  background: url('travel.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 20%;
   max-height: 50%;
   opacity: 0.8;
 }
 
-#blurb{
-  background-color:rgba(245, 239, 227, 0.6);
-  margin-top:0px;
+#blurb {
+  background-color: rgba(245, 239, 227, 0.6);
+  margin-top: 0px;
 }
 
-body{
-  background-color:beige;
+body {
+  background-color: beige;
 }
 
-.lead{
-  font-weight:500;
+.lead {
+  font-weight: 500;
+}
+
+.alert {
+  text-align: center;
+  padding: 10px;
+  background: green;
+  color: white;
+  margin-bottom: 10px;
+  display: none;
 }
