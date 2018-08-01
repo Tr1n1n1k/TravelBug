@@ -13,7 +13,7 @@
 
 
   <!-- RESET STYLE SHEET -->
-  <link href="style(GI-PhotoAPI).css" rel="stylesheet">
+  <link href="assets/css/reset(GI-PhotoAPI).css" rel="stylesheet">
 
   <!-- BOOTSTRAP CDN so can integrate buttons and cards -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
@@ -28,8 +28,8 @@
     crossorigin="anonymous">
 
   <!-- STYLE SHEET -->
-  <link href="style(GI-PhotoAPI).css" rel="stylesheet">
-  <link href="hover.css" rel="stylesheet">
+  <link href="assets/css/style(GI-PhotoAPI).css" rel="stylesheet">
+  <link href="assets/css/hover.css" rel="stylesheet">
 
   <!-- FONTS -->
 
@@ -39,9 +39,9 @@
 
   <!-- FIREBASE FOR CONTACT FORM -->
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <script src="app(GI-PhotoAPI).js " type="text/javascript "></script>
-  <script src="assets/javascript/app.js" type="text/javascript"></script>
-  <script src="contact.js" type="text/javascript "></script>
+  <script src="assets/javascript/app(GI-PhotoAPI).js" type="text/javascript "></script>
+  <!-- <script src="assets/javascript/app.js" type="text/javascript"></script> -->
+  <script src="assets/javascript/contact.js" type="text/javascript "></script>
 
   <title>TRAVEL BUG</title>
 
@@ -79,14 +79,15 @@
   <div class="container">
     <div class="buttonSection">
       <div class="row">
-        <div class="col">
-          <div id="buttonsArea"></div>
-        </div>
+        <!-- <div class="col"> -->
+        <div id="buttonsArea"></div>
       </div>
     </div>
+    <!-- </div> -->
 
-    <div class="row">
-      <div class="col">
+    <div class="searchSection">
+      <div class="row">
+        <!-- <div class="col"> -->
         <form id="search-form">
           <p id="search">Your adventure awaits! Enter in a new destination below to create a new button. Then click on the button to see
             photos of that destination. </p>
@@ -99,12 +100,14 @@
       </div>
     </div>
   </div>
+  <!-- </div> -->
 
   <!-- Photo API -->
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="wrapper">
-        <p id="instagram">Instagram Inspiration</p>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-lg-6">
+
+        <h2 id="instagram">Unsplash.com Inspiration</h2>
         <div id="MagicCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#MagicCarousel" data-slide-to="0" class="active"></li>
@@ -141,41 +144,38 @@
           </div>
         </div>
       </div>
-    </div>
 
 
-    <!-- Weather API -->
-    <div class="col-lg-6">
-      <div class="weather text-center">
-        <p id="weatherHeading">Current Weather</p>
-        <h2 class="temp"></h2>
-        <h3>
-          <span id="city"></span>
-          <br>
-          <span id="wind"></span>
-          <br>
-          <span id="humidity"></span>
-          <br>
-          <span id="temp"></span>
-          <br>
-          <span id="description"></span>
-        </h3>
+
+      <!-- Weather API -->
+      <div class="col-lg-6">
+        <div class="weather text-center">
+          <h2 id="weatherHeading">Current Weather</h2>
+          <h2 class="temp"></h2>
+          <h3>
+            <span id="city"></span>
+            <br>
+            <span id="wind"></span>
+            <br>
+            <span id="humidity"></span>
+            <br>
+            <span id="temp"></span>
+            <br>
+            <span id="description"></span>
+          </h3>
+        </div>
+      </div>
+
+      <div id="weather-view"></div>
+      <div style="float:right;margin-right:20px">
       </div>
     </div>
   </div>
 
-  <div id="weather-view"></div>
 
 
-  <div style="float:right;margin-right:20px">
-    <h3>Add new City</h3>
-    <form id="searchForm">
-      <input type="text" id="search-input">
-      <br>
-      <br>
-      <input id="search" type="submit" value="Submit">
-    </form>
-  </div>
+
+
 
   </div>
 </body>
