@@ -1,54 +1,57 @@
 $(document).ready(function() {
-  var fahrenheit, celsius;
-  var weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?';
-  var apiKey = '14cdfc0f69ac16497d5267b06df4ae0d';
-  getLatLong();
+  var citys = ['Toronto', 'Paris', 'London', 'Tokyo', 'New York'];
 
-  /* function to get user's location */
-  function getLatLong() {
-    $.ajax({
-      url: 'https://geoip-db.com/json/',
-      type: 'GET',
-      dataType: 'json',
-      success: function(data) {
-        var lat = '';
-        var long = data.longitude;
-        $('.city').html(data.city);
-        $('.country').html(data.country_name);
-        weatherApiUrl +=
-          '?lat=' + lat + '&lon=' + long + '&APPID=' + apiKey + '&units=metric';
-        getWeatherData();
-      },
-      error: function(err) {
-        alert('Oops something went wrong, Please try again.');
-        console.log(err);
-      }
-    });
+  function currCity() {
+    $('#weather-view').empty();
+    for (var i = 0; i < citys.length; i++) {
+      //TODO : rename variable to something more relevant
+      var currCityAdd = $('<button>');
+      currCityAdd.addClass('searchButton');
+      currCityAdd.attr('data-name', citys[i]);
+      currCityAdd.text(citys[i]);
+      $('#weather-view').append(currCityAdd);
+    }
   }
-  /* function to get weather data from the user's location */
-  function getWeatherData() {
+
+  $('#search').on('click', function(event) {
+    event.preventDefault();
+    var newCity = $('#search-input').val();
+    citys.push(newCity);
+
+    //TODO : different function to be used here (with var)
+    //similar functionality to weatherBtn() w/o loop
+
+    currCity(newCity);
+    console.log(newCity);
+    // return false;
+  });
+
+  $(document).on('click', '.searchButton', function(displayWeatherInfo) {
+    var city = $(this).attr('data-name');
+    console.log(city);
+    var APIKey = '166a433c57516f51dfab1f7edaed8413';
+
+    var queryURL =
+      'https://api.openweathermap.org/data/2.5/weather?' +
+      'q=' +
+      city +
+      '&units=metric&appid=' +
+      APIKey;
     $.ajax({
-      url: weatherApiUrl,
-      type: 'GET',
-      dataType: 'json',
-      success: function(data) {
-        var temprature = data.main.temp;
-        celsius = temprature;
-        fahrenheit = celsius * 1.8 + 32;
-        var icon = data.weather[0].icon;
-        var weatherDetail =
-          data.weather[0].main + ', ' + data.weather[0].description;
-        $('.weatherDetail').html(weatherDetail);
-        $('.iconpic>img').attr(
-          'src',
-          'http://openweathermap.org/img/w/' + icon + '.png'
-        );
-        $('.temp').html(temprature + '&#8451;');
-      },
-      error: function(err) {
-        alert('Oops something went wrong, Please try again.');
-        console.log(err);
-      }
+      url: queryURL,
+      method: 'GET'
+    }).then(function(response) {
+      console.log(queryURL);
+      console.log(response);
+
+      $('#city').html('<h1>' + response.name + ' Weather Details</h1>');
+      $('#wind').html('Wind Speed: ' + response.wind.speed + ' MPS');
+      $('#humidity').html('Humidity: ' + response.main.humidity + ' %');
+      $('#temp').html('Temperature: ' + response.main.temp + ' C');
+      $('#description').html('Description: ' + response.weather[0].description);
     });
-  }
+    $(document).on('click', '.searchButton', displayWeatherInfo);
+  });
+
+  currCity();
 });

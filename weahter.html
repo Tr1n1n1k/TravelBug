@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Weather App</title>
+
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
+
   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -20,35 +25,50 @@
         <div class="weather text-center">
           <h2 class="temp"></h2>
           <h3>
-            <span class="city"></span>,
-            <span class="country"></span>
+            <span id="city"></span>
+            <br>
+            <span id="wind"></span>
+            <br>
+            <span id="humidity"></span>
+            <br>
+            <span id="temp"></span>
+            <br>
+            <span id="description"></span>
           </h3>
-          <div class="iconpic">
-            <img src="" class='img img-responsive center-block'>
-          </div>
-          <h4 class="weatherDetail"></h4>
-          <div class="toggle" id="c">
-            <button type="button" class="btn btn-danger btn-lg">Toggle temperature</button>
-          </div>
-        </div id="weatherChoice">
-        <button type="button" style="margin:10px" class="btn btn-primary">Toronto</button>
-        <button type="button" style="margin:10px" class="btn btn-primary">Toyko</button>
-        <button type="button" style="margin:10px" class="btn btn-primary">Paris</button>
-        <button type="button" style="margin:10px" class="btn btn-primary">New York</button>
-        <button type="button" style="margin:10px" class="btn btn-primary">London</button>
-      </div>
-      <div id="search">
-        <input type="text" name="search" placeholder="Search..">
+        </div>
       </div>
     </div>
-    <!--row-->
-    <br/>
+  </div>
+
+  <!-- </div id="weatherChoice">
+  <button type="button" style="margin:10px" class="searchButton" data-name="Toronto" id="Toronto">Toronto</button>
+  <button type="button" style="margin:10px" class="searchButton" data-name="Tokyo" id="Tokyo">Tokyo</button>
+  <button type="button" style="margin:10px" class="searchButton" data-name="Paris" id="Paris">Paris</button>
+  <button type="button" style="margin:10px" class="searchButton" data-name="New York" id="New York">New York</button>
+  <button type="button" style="margin:10px" class="searchButton" data-name="London" id="London">London</button>
+  </div> -->
+  <div id="weather-view"></div>
+
+
+  <div style="float:right;margin-right:20px">
+    <h3>Add new City</h3>
+    <form id="searchForm">
+      <input type="text" id="search-input">
+      <br>
+      <br>
+      <input id="search" type="submit" value="Submit">
+    </form>
+  </div>
+
+  </div>
+  <!--row-->
+  <br/>
 
 
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-      crossorigin="anonymous"></script>
-    <script src="assets/javascript/app.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
