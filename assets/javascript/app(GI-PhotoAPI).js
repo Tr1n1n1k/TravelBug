@@ -46,7 +46,7 @@ $(function () {
 
   //on click event to recognize which button is clicked
   $(document).on('click', '.searchButton', function () {
-    $("#quote").hide();
+    $("#cobblestone").hide();
     $("#sunshine").hide();
     //$('#searches').empty();
     var type = $(this).data('type');
@@ -120,7 +120,7 @@ $(function () {
       console.log(queryURL);
       console.log(response);
 
-      $('#city').html('<h1>' + response.name + ' Weather Details</h1>');
+      $('#city').html('<p> Current Weather in ' + response.name + '</p>');
       $('#wind').html('Wind Speed: ' + response.wind.speed + ' MPS');
       $('#humidity').html('Humidity: ' + response.main.humidity + ' %');
       $('#temp').html('Temperature: ' + response.main.temp + ' C');
