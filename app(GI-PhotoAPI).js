@@ -27,14 +27,14 @@ $(function() {
     }
   }
 
-  //Add more buttons when search new animals pics
+  //Add more buttons when search new destination pics
   $('#addSearch').on('click', function() {
-    //eq(0) used to ensure it takes the value from the text input not submit button input.
-    var newSearch = $('input')
-      .eq(0)
-      .val();
+    var newSearch = $('#search-input')
+      .val()
+      .trim();
     //pushing it to seach array
     searchArray.push(newSearch);
+    newSearch = $('#search-input').val('');
     console.log('input');
     //want to popoulate button to buttosArea
     populateButtons(searchArray, 'searchButton', '#buttonsArea');
@@ -88,19 +88,19 @@ $(function() {
             arrImg[0] +
             '/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First Slide">'
         );
-        $('.imgInfo1').html('<h3>' + type + '</h3>' + '<p> Slide 1 </p>');
+        $('.imgInfo1').html('<h3>' + type + '</h3>');
         $('.cImg2').html(
           '<img class="d-block w-100"  src="' +
             arrImg[1] +
             '/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second Slide">'
         );
-        $('.imgInfo2').html('<h3>' + type + '</h3>' + '<p> Slide 2 </p>');
+        $('.imgInfo2').html('<h3>' + type + '</h3>');
         $('.cImg3').html(
           '<img class="d-block w-100"  src="' +
             arrImg[2] +
             '/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Thrid Slide">'
         );
-        $('.imgInfo3').html('<h3>' + type + '</h3>' + '<p> Slide 3 </p>');
+        $('.imgInfo3').html('<h3>' + type + '</h3>');
       });
   });
 });
