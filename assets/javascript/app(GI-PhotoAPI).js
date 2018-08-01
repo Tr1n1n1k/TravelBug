@@ -1,7 +1,7 @@
 //Array to populate buttons area with buttons
 var searchArray = ['Toronto', 'New York', 'London', 'Paris', 'Rome', 'Tokyo'];
 
-$(function() {
+$(function () {
   //the following will run the function populateButtons to populate th buttonArea with the search array and with buttons
   populateButtons(searchArray, 'searchButton', '#buttonsArea');
 
@@ -28,7 +28,7 @@ $(function() {
   }
 
   //Add more buttons when search new destination pics
-  $('#addSearch').on('click', function() {
+  $('#addSearch').on('click', function () {
     var newSearch = $('#search-input')
       .val()
       .trim();
@@ -45,7 +45,9 @@ $(function() {
   //---------------------------AJAX PHOTO API---------------------
 
   //on click event to recognize which button is clicked
-  $(document).on('click', '.searchButton', function() {
+  $(document).on('click', '.searchButton', function () {
+    $("#quote").hide();
+    $("#sunshine").hide();
     //$('#searches').empty();
     var type = $(this).data('type');
 
@@ -62,7 +64,7 @@ $(function() {
       method: 'GET'
     })
       //Done function to get response from API
-      .done(function(response) {
+      .done(function (response) {
         //test to make check if I am getting a response
         console.log(response);
 
@@ -85,20 +87,20 @@ $(function() {
 
         $('.cImg1').html(
           '<img class="d-block w-100"  src="' +
-            arrImg[0] +
-            '/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First Slide">'
+          arrImg[0] +
+          '/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First Slide">'
         );
         $('.imgInfo1').html('<h3>' + type + '</h3>');
         $('.cImg2').html(
           '<img class="d-block w-100"  src="' +
-            arrImg[1] +
-            '/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second Slide">'
+          arrImg[1] +
+          '/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second Slide">'
         );
         $('.imgInfo2').html('<h3>' + type + '</h3>');
         $('.cImg3').html(
           '<img class="d-block w-100"  src="' +
-            arrImg[2] +
-            '/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Thrid Slide">'
+          arrImg[2] +
+          '/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Thrid Slide">'
         );
         $('.imgInfo3').html('<h3>' + type + '</h3>');
       });
@@ -114,7 +116,7 @@ $(function() {
     $.ajax({
       url: queryURL,
       method: 'GET'
-    }).then(function(response) {
+    }).then(function (response) {
       console.log(queryURL);
       console.log(response);
 
