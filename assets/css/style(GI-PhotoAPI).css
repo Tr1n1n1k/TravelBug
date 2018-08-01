@@ -6,14 +6,26 @@ h1 {
 #explanation,
 #search {
   font-family: 'Cardo', serif;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #instagram,
-#weatherHeading {
+#weatherHeading, {
   font-family: 'Lora', serif;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
+  font-weight: bold;
+}
+
+#weatherText{
+  font-family: 'Lora', serif;
+  font-size: 22px;
+}
+
+#city{
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  font-weight:bold;
 }
 
 .wrapper {
@@ -48,7 +60,7 @@ body {
 
 form {
   width: 75%;
-  margin: 20px;
+  margin: 10px;
   padding-right: 200px;
 }
 
@@ -93,10 +105,9 @@ input[type='submit'] {
   font-weight: bolder;
 }
 
-#quote{
+#cobblestone{
   align-content: center;
-  width: 250px;
-  margin-left: 30%;
+  width: 85%;
 }
 
 #sunshine{
