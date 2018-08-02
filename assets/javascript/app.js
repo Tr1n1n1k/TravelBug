@@ -4,7 +4,7 @@ $(document).ready(function() {
   function currCity() {
     $('#weather-view').empty();
     for (var i = 0; i < citys.length; i++) {
-      //TODO : rename variable to something more relevant
+     
       var currCityAdd = $('<button>');
       currCityAdd.addClass('searchButton');
       currCityAdd.attr('data-name', citys[i]);
@@ -18,12 +18,10 @@ $(document).ready(function() {
     var newCity = $('#search-input').val();
     citys.push(newCity);
 
-    //TODO : different function to be used here (with var)
-    //similar functionality to weatherBtn() w/o loop
 
     currCity(newCity);
     console.log(newCity);
-    // return false;
+  
   });
 
   $(document).on('click', '.searchButton', function(displayWeatherInfo) {
