@@ -9,7 +9,7 @@ $(function() {
   };
   firebase.initializeApp(config);
 
-  $('.js-form').on('submit', event => {
+  $('.js-form').on('send', event => {
     event.preventDefault();
     const name = $('#name').val();
     const email = $('#email').val();
