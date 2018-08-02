@@ -79,7 +79,7 @@ $(function () {
     //  pushes vacay info to firebase
     database.ref().push(newVacay);
 
-    alert("Your REview Has Been Added!");
+    alert("Your Review Has Been Added!");
 
     // Clears all of the text-boxes
     $('#usernameInput').val('');
