@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   // link to firebase //////
   // Initialize Firebase
   var config = {
@@ -35,7 +35,7 @@ $(function() {
   //     con.onDisconnect().remove();
   //   }
   //});
-  $('.form-group').on('submit', function(event) {
+  $('.form-group').on('submit', function (event) {
     event.preventDefault();
 
     var usernameInput = $('#usernameInput')
@@ -47,6 +47,7 @@ $(function() {
     var activitiesInput = $('#activitiesInput')
       .val()
       .trim();
+
     var ratingInput = $('#ratingInput')
       .val()
       .trim();
@@ -88,7 +89,7 @@ $(function() {
     $('#pricingInput').val('');
   });
   // Create Firebase event for adding train to the database and a row in the html when a user adds an entry
-  database.ref().on('child_added', function(childSnapshot) {
+  database.ref().on('child_added', function (childSnapshot) {
     console.log(childSnapshot.val());
 
     // Store everything into a variable.

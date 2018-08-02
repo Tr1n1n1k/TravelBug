@@ -1,4 +1,4 @@
-h1 {
+h1, h3 {
   font-family: 'Philosopher', sans-serif;
   font-weight: 700;
 }
@@ -10,19 +10,24 @@ h1 {
 }
 
 #instagram,
-#weatherHeading, {
+#weatherHeading{
   font-family: 'Lora', serif;
   font-size: 22px;
   text-align: center;
   font-weight: bold;
 }
 
-#weatherText{
+#weatherText, #tableInput{
   font-family: 'Lora', serif;
   font-size: 22px;
 }
 
-#city{
+#tableInput{
+  font-family: 'Lora', serif;
+  font-size: 20px;
+}
+
+#city, #review{
   font-family: 'Lora', serif;
   font-size: 22px;
   font-weight:bold;
